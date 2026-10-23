@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Asvaragust | Front-End Developer untuk Website Bisnismu</title>
+  <meta name="description" content="Front-End Developer untuk website bisnismu: landing page, optimasi SEO, redesign, dan solusi masalah website dengan harga bersahabat." />
+  <meta name="theme-color" content="#070504" />
+  <link rel="icon" href="/pfp.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <!-- ========== HOME / HERO ========== -->
+  <main class="relative h-dvh overflow-hidden">
+    <video class="absolute inset-0 size-full object-cover" src="/bg.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <div class="absolute inset-0 bg-linear-to-b from-ink-950/85 via-ink-950/25 to-ink-950/90"></div>
+
+    <div class="relative grid h-full grid-rows-[auto_1fr_auto] justify-items-center px-4 pt-[max(2rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] text-center">
+      <header>
+        <h1 class="font-display text-5xl font-black tracking-wider text-gold-300 [text-shadow:0_2px_28px_rgba(0,0,0,.9)] sm:text-7xl lg:text-8xl">Asvaragust</h1>
+        <p class="mt-3 font-display text-sm tracking-[.2em] text-bone sm:text-lg">Front-End Developer untuk Website Bisnismu</p>
+      </header>
+
+      <img src="/pfp.png" alt="Foto Asvaragust, Front-End Developer" class="place-self-center size-40 rounded-full border-2 border-gold-500 object-cover shadow-[0_0_0_6px_rgba(7,5,4,.65),0_0_70px_rgba(155,31,23,.6)] sm:size-56" />
+
+      <div class="w-full max-w-xl">
+        <nav aria-label="Menu utama" class="flex divide-x divide-gold-700/50 border border-gold-700/70 bg-ink-950/75 shadow-[inset_0_0_0_3px_rgba(7,5,4,.9),inset_0_0_0_4px_rgba(138,106,40,.45)] backdrop-blur-md">
+          <button class="nav-item flex-1" data-open="home" data-title="Selamat Datang">Home</button>
+          <button class="nav-item flex-1" data-open="layanan" data-title="Layanan">Layanan</button>
+          <button class="nav-item flex-1" data-open="projek" data-title="Proyek Saya">Projek</button>
+          <button class="nav-item flex-1" data-open="tentang" data-title="Tentang Saya">Tentang</button>
+          <button class="nav-item flex-1" data-open="kontak" data-title="Kontak">Kontak</button>
+        </nav>
+        <!-- ========== FOOTER ========== -->
+        <footer class="mt-3 text-xs text-bone/60">&copy; 2026 Asvaragust. Front-End Developer.</footer>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== MODAL (kosong, diisi dari <template> di bawah) ========== -->
+  <dialog id="modal" aria-labelledby="modal-title">
+    <div class="flex items-center justify-between border-b border-gold-700/50 px-6 py-4">
+      <h2 id="modal-title" class="font-display text-xl font-bold text-gold-300 sm:text-2xl"></h2>
+      <button id="modal-close" type="button" aria-label="Tutup" class="px-2 text-2xl leading-none text-bone/70 transition hover:text-lacquer-500">&times;</button>
+    </div>
+    <div id="modal-body" class="max-h-[70dvh] overflow-y-auto px-6 py-6"></div>
+  </dialog>
+
+  <!-- ========== ISI MODAL: HOME ========== -->
+  <template id="tpl-home">
+    <p class="leading-relaxed">Punya masalah di website, atau bingung mulai dari mana? Konsultasikan dengan saya. Saya bantu cari solusinya dengan harga bersahabat.</p>
+    <a data-wa class="btn-cta mt-6">Hubungi Saya via WhatsApp</a>
+  </template>
+
+  <!-- ========== ISI MODAL: LAYANAN ========== -->
+  <template id="tpl-layanan">
+    <ul class="grid gap-4 sm:grid-cols-2">
+      <li class="panel-card"><h3 class="panel-heading">Landing Page Bisnis</h3><p>Halaman yang rapi, cepat, dan nyaman dibuka di HP maupun laptop.</p></li>
+      <li class="panel-card"><h3 class="panel-heading">Optimasi SEO</h3><p>Bikin websitemu lebih mudah ditemukan di Google.</p></li>
+      <li class="panel-card"><h3 class="panel-heading">Redesign Website</h3><p>Ubah tampilan lama jadi lebih rapi dan modern.</p></li>
+      <li class="panel-card"><h3 class="panel-heading">Solusi Masalah Website</h3><p>Bug, tampilan berantakan, atau kendala teknis lain, kita selesaikan bersama.</p></li>
+    </ul>
+    <a data-wa class="btn-cta mt-6">Hubungi Saya via WhatsApp</a>
+  </template>
+
+  <!-- ========== ISI MODAL: PROJEK (maks. 3 card) ========== -->
+  <template id="tpl-projek">
+    <div class="grid gap-4 sm:grid-cols-2">
+
+      <!-- MULAI CARD PROJEK: copy blok <article> ini, lalu ganti gambar, alt, judul, deskripsi, dan link -->
+      <article class="panel-card">
+        <img src="/snapshot.png" alt="Tampilan landing page rak Hotwheels" class="aspect-video w-full object-cover" loading="lazy" />
+        <h3 class="panel-heading mt-4">Landing Page Rak Hotwheels</h3>
+        <p>Sebuah landing page yang membantu customer lebih mengenal produk yang ditawarkan.</p>
+        <a href="https://landing-page-rak-hw.vercel.app/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block border-b border-gold-500 font-display text-gold-300 transition hover:text-lacquer-500 hover:border-lacquer-500">Kunjungi website</a>
+      </article>
+      <!-- SELESAI CARD PROJEK -->
+
+    </div>
+  </template>
+
+  <!-- ========== ISI MODAL: TENTANG SAYA ========== -->
+  <template id="tpl-tentang">
+    <div class="space-y-4 leading-relaxed">
+      <p>Sejak kecil saya tertarik pada dunia komputer, berkat Ayah yang mengenalkan komponen-komponennya. Dari situ saya terus mengikuti perkembangannya, dan kini fokus di Web Development.</p>
+      <p>Awalnya saya kagum melihat website-website keren yang saya kunjungi. Saya mulai belajar dari dasar sampai bisa membuat website sendiri. Perjalanannya tidak singkat, tapi ketekunan membawa saya sampai di sini.</p>
+      <p>Saat SMA, saya mengikuti berbagai lomba Robotik, lolos OSN tingkat kota, dan meraih Juara 1 Cerdas Cermat Informatika. Kini saya kuliah sambil mengerjakan proyek freelance paruh waktu untuk terus mengasah pengalaman.</p>
+    </div>
+  </template>
+
+  <!-- ========== ISI MODAL: KONTAK ========== -->
+  <template id="tpl-kontak">
+    <p class="mb-6 text-lg">Punya proyek atau masalah website?</p>
+    <div class="flex flex-wrap gap-3">
+      <a data-wa class="btn-cta"><img src="/logo-whatsapp.png" alt="" class="size-5" />Chat saya di WhatsApp</a>
+      <a href="mailto:asvaragust@gmail.com" class="btn-cta bg-transparent"><img src="/logo-email.png" alt="" class="size-5" />asvaragust@gmail.com</a>
+    </div>
+  </template>
+</body>
+</html>
